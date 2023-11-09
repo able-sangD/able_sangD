@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<head>
+    <title>게자리</title>
+    <style>
+        body {
+            background-image: url('별자리.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        h1 {
+            font-size: 50px;
+            color: #ffffff;
+            text-align: center;
+            padding: 0px;
+        }
+        h2 {
+            font-size: 30px;
+            color: #eddbee;
+            text-align: center;
+            padding: 20px;
+        }
+        h3 {
+            font-size: 30px;
+            color: #eddbee;
+            text-align: center;
+            padding: 10px;
+        }
+        h4 {
+            font-size: 50px;
+            color: #ffffff;
+            text-align: center;
+            padding: 0px;
+        }
+        p {
+            font-size: 20px;
+            color: #ffffff;
+            text-align: center;
+            padding: 5px;
+        }
+        p_1 {
+            font-size: 20px;
+            color: #ffffff;
+            text-align: center;
+            padding: 0px;
+        }
+        .button-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            color: #ffffff;
+            text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+            background-color: #4a00e0;
+            margin: 20px auto;
+            display: block;
+        }
+    </style>
+     
+</head>
+<body>
+    <h1>게자리♋Cancer</h1>
+    <h2>6월 22일 ~ 7월 22일</h2>
+    <button onclick="say()" class="button">게자리 신화</button>
+    <h3>  </h3>
+    <p_1 id="fortune1"></p_1>
+    <h4>오늘의 운세</h4>
+    <p id="fortune"></p>
+    <div class="button-container">
+        <a href="index.html">
+            <button class="button" id="Button1">돌아가기</button>
+        </a>
+    </div>
+
+    <script>
+        function say() {
+                document.getElementById("fortune1").textContent = "\n헤르쿨레스는 에우리테우스 왕의 속박으로부터 풀려나기 위해 12가지 고역을 겪었다. 그 중 두 번째가 괴물 물뱀 히드라를 물리치는 것이었다. 헤르쿨레스가 히드라를 잡기 위해 네메아 계곡에서 물뱀과 30일 간의 대 혈전을 벌이고 있을 때 평소 헤르쿨레스를 미워하던 헤라는 물뱀을 돕기 위해 게 한 마리를 보냈다. 게는 여신의 명령대로 헤르쿨레스의 발가락을 무는데 성공했지만, 결국은 그의 발에 밟혀 한 쪽 발이 부러진 채 죽고 말았다. 헤라는 자신을 위해 싸우다 죽은 게에 대한 보답으로 그 시체를 올려 하늘의 별자리로 만들었다.";
+            }
+
+        function showFortune() {
+            // 랜덤으로 운세 선택
+            var fortunes = [
+                "게자리인 당신! 오늘은 가장 행운이 넘치는 날일겁니다.",
+                "조금 더 신중하게 생각하는 것은 불운을 막아줄 것입니다.",
+                "주변 사람들과 즐거운 시간을 보낼 것입니다.",
+                "어떤 어려움도 이겨낼 수 있을 것입니다.",
+                "조금 더 긍정적으로 생각해 보세요.",
+                "무리하게 일을 진행시키기 보다 적절히 휴식하면서 페이스를 조절하는 것이 좋습니다.",
+            ];
+            var randomIndex = Math.floor(Math.random() * fortunes.length);
+            var randomFortune = fortunes[randomIndex];
+
+            
+
+            // 운세를 화면에 표시
+            document.getElementById("fortune").textContent = randomFortune;
+        }
+        window.onload = showFortune();
+    </script>
+
+</body>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<head>
+    <title>황소자리</title>
+    <style>
+        body {
+            background-image: url('별자리.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        h1 {
+            font-size: 50px;
+            color: #ffffff;
+            text-align: center;
+            padding: 0px;
+        }
+        h2 {
+            font-size: 30px;
+            color: #eddbee;
+            text-align: center;
+            padding: 20px;
+        }
+        h3 {
+            font-size: 30px;
+            color: #eddbee;
+            text-align: center;
+            padding: 10px;
+        }
+        h4 {
+            font-size: 50px;
+            color: #ffffff;
+            text-align: center;
+            padding: 0px;
+        }
+        p {
+            font-size: 20px;
+            color: #ffffff;
+            text-align: center;
+            padding: 5px;
+        }
+        p_1 {
+            font-size: 20px;
+            color: #ffffff;
+            text-align: center;
+            padding: 0px;
+        }
+        .button-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            color: #ffffff;
+            text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+            background-color: #4a00e0;
+            margin: 20px auto;
+            display: block;
+        }
+    </style>
+     
+</head>
+<body>
+    <h1>황소자리♉Taurus</h1>
+    <h2>4월 20일 ~ 5월 20일</h2>
+    <button onclick="say()" class="button">황소자리 신화</button>
+    <h3>  </h3>
+    <p_1 id="fortune1"></p_1>
+    <h4>오늘의 운세</h4>
+    <p id="fortune"></p>
+    <div class="button-container">
+        <a href="index.html">
+            <button class="button">돌아가기</button>
+        </a>
+    </div>
+
+    <script>
+        function say() {
+            document.getElementById("fortune1").textContent = "\n제우스는 바닷가에서 놀고 있는 유로파의 아름답고 우아한 모습에 반해버려 곧 사랑에 빠졌고, 유로파를 유혹하기 위해 눈부신 하얀 소로 변신하여 왕의 소떼 속으로 들어갔다. 제우스의 의도대로 유로파 공주는 많은 소들 중에서 멋진 흰 소를 발견하였고, 눈부신 소의 아름다움에 사로잡혀 흰 소 곁으로 다가갔다. 유로파가 다가가 장난치듯 황소 등에 올라타자 흰 소는 기다렸다는 듯이 바다로 뛰어들어 크레테섬까지 헤엄쳐 갔다. 크레테에 도착한 제우스는 본래의 모습을 드러내고 유로파를 설득시켜 아내로 맞이하였다.";
+        }
+
+        function showFortune() {
+            // 랜덤으로 운세 선택
+            var fortunes = [
+                "황소자리인 당신! 오늘은 가장 행운이 넘치는 날일겁니다.",
+                "조금 더 신중하게 생각하는 것은 불운을 막아줄 것입니다.",
+                "주변 사람들과 즐거운 시간을 보낼 것입니다.",
+                "어떤 어려움도 이겨낼 수 있을 것입니다.",
+                "조금 더 긍정적으로 생각해 보세요.",
+                "무리하게 일을 진행시키기 보다 적절히 휴식하면서 페이스를 조절하는 것이 좋습니다.",
+            ];
+            var randomIndex = Math.floor(Math.random() * fortunes.length);
+            var randomFortune = fortunes[randomIndex];
+
+            // 운세를 화면에 표시
+            document.getElementById("fortune").textContent = randomFortune;
+        }
+        window.onload = showFortune();
+    </script>
+
+</body>

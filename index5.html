@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<head>
+    <title>사자자리</title>
+    <style>
+        body {
+            background-image: url('별자리.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        h1 {
+            font-size: 50px;
+            color: #ffffff;
+            text-align: center;
+            padding: 0px;
+        }
+        h2 {
+            font-size: 30px;
+            color: #eddbee;
+            text-align: center;
+            padding: 20px;
+        }
+        h3 {
+            font-size: 30px;
+            color: #eddbee;
+            text-align: center;
+            padding: 10px;
+        }
+        h4 {
+            font-size: 50px;
+            color: #ffffff;
+            text-align: center;
+            padding: 0px;
+        }
+        p {
+            font-size: 20px;
+            color: #ffffff;
+            text-align: center;
+            padding: 5px;
+        }
+        p_1 {
+            font-size: 20px;
+            color: #ffffff;
+            text-align: center;
+            padding: 0px;
+        }
+        .button-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            color: #ffffff;
+            text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+            background-color: #4a00e0;
+            margin: 20px auto;
+            display: block;
+        }
+    </style>
+     
+</head>
+<body>
+    <h1>사자자리♌Leo</h1>
+    <h2>7월 23일 ~ 8월 22일</h2>
+    <button onclick="say()" class="button">사자자리 신화</button>
+    <h3>  </h3>
+    <p_1 id="fortune1"></p_1>
+    <h4>오늘의 운세</h4>
+    <p id="fortune"></p>
+    <div class="button-container">
+        <a href="index.html">
+            <button class="button" id="Button1">돌아가기</button>
+        </a>
+    </div>
+
+    <script>
+        function say() {
+                document.getElementById("fortune1").textContent = "\n하늘이 혼란스러워 별들이 자리를 떠나고 혜성이 자주 나타나던 때 달에서 유성 하나가 황금사자의 모습으로 네메아 골짜기에 떨어졌다. 유성이 변하여 된 이 사자는 지구의 사자보다 훨씬 컸고, 성질도 포악하여 네메아 사람들에게 많은 고통을 주었다. 그 당시 제우스와 알크메나 사이에서 태어난 헤르쿨레스는 제우스의 아내 헤라의 미움을 받아 12가지의 모험을 해야 했는데 그 중 첫 번째가 네메아 골짜기의 사자를 죽이는 일이었다. 헤르쿨레스는 활과 창, 방망이 등을 사용하여 사자와 싸워보았지만 어떤 무기로도 결코 사자를 이길 수 없었다. 헤르쿨레스는 무기를 버리고 사자와 뒤엉켜 생사를 가르는 격투를 벌인 끝에 사자를 물리칠 수 있었다. 그 후로 네메아 지방 사람들은 사자의 공포에서 벗어나 평온을 되찾을 수 있었고, 헤르쿨레스는 어떠한 무기로도 뚫을 수 없는 사자 가죽을 얻게 되었다. 제우스는 아들 헤르쿨레스의 용맹을 기리기 위하여 사자를 하늘의 별자리로 만들었다.";
+            }
+
+        function showFortune() {
+            // 랜덤으로 운세 선택
+            var fortunes = [
+                "사자자리인 당신! 오늘은 가장 행운이 넘치는 날일겁니다.",
+                "조금 더 신중하게 생각하는 것은 불운을 막아줄 것입니다.",
+                "주변 사람들과 즐거운 시간을 보낼 것입니다.",
+                "어떤 어려움도 이겨낼 수 있을 것입니다.",
+                "조금 더 긍정적으로 생각해 보세요.",
+                "무리하게 일을 진행시키기 보다 적절히 휴식하면서 페이스를 조절하는 것이 좋습니다.",
+            ];
+            var randomIndex = Math.floor(Math.random() * fortunes.length);
+            var randomFortune = fortunes[randomIndex];
+
+            
+
+            // 운세를 화면에 표시
+            document.getElementById("fortune").textContent = randomFortune;
+        }
+        window.onload = showFortune();
+    </script>
+
+</body>

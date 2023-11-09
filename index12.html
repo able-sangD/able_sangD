@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<head>
+    <title>물고기자리</title>
+    <style>
+        body {
+            background-image: url('별자리.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        h1 {
+            font-size: 50px;
+            color: #ffffff;
+            text-align: center;
+            padding: 0px;
+        }
+        h2 {
+            font-size: 30px;
+            color: #eddbee;
+            text-align: center;
+            padding: 20px;
+        }
+        h3 {
+            font-size: 30px;
+            color: #eddbee;
+            text-align: center;
+            padding: 10px;
+        }
+        h4 {
+            font-size: 50px;
+            color: #ffffff;
+            text-align: center;
+            padding: 0px;
+        }
+        p {
+            font-size: 20px;
+            color: #ffffff;
+            text-align: center;
+            padding: 5px;
+        }
+        p_1 {
+            font-size: 20px;
+            color: #ffffff;
+            text-align: center;
+            padding: 0px;
+        }
+        .button-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            color: #ffffff;
+            text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+            background-color: #4a00e0;
+            margin: 20px auto;
+            display: block;
+        }
+    </style>
+     
+</head>
+<body>
+    <h1>물고기자리♓Pisces</h1>
+    <h2>2월 19일 ~ 3월 20일</h2>
+    <button onclick="say()" class="button">물고기자리 신화</button>
+    <h3>  </h3>
+    <p_1 id="fortune1"></p_1>
+    <h4>오늘의 운세</h4>
+    <p id="fortune"></p>
+    
+    <div class="button-container">
+        <a href="index.html">
+            <button class="button" id="Button1">돌아가기</button>
+        </a>
+    </div>
+
+    <script>
+        function say() {
+            document.getElementById("fortune1").textContent = "\n그리스 신화에 따르면 테살리에 야타마스라고 불리는 왕이 살고 있었는데, 그에게는 프릭수스와 헬레라는 두 남매가 있었다. 이들이 어렸을 때 어머니가 돌아가셔서 아이들은 계모의 시달림을 받으며 살았다. 이것을 우연히 본 전령의 신 헤르메스는 남매를 불쌍히 여겨 황금 가죽을 가진 숫양을 가지고 내려와 아이들을 보다 행복한 곳으로 보내기 위해 양에 태웠다. 양의 등에 타고 하늘을 날던 중, 어린 헬레는 그만 아시아와 유럽을 나누는 해협에 떨어지고 말았다. 훗날 사람들은 헬레의 가여운 운명을 기억하고자 이 해협을 헬레스폰트라 불렀다. 홀로 남은 프릭소스는 양을 타고 계속 날아가 흑해의 동쪽 연안에 자리 잡고 있는 콜키스에 안전하게 도착하였다. 제우스는 이 양의 공로를 치하하여 하늘의 별자리로 만들었다.";
+        }
+
+        function showFortune() {
+            var fortunes = [
+                "물고기자리인 당신! 오늘은 가장 행운이 넘치는 날일겁니다.",
+                "조금 더 신중하게 생각하는 것은 불운을 막아줄 것입니다.",
+                "주변 사람들과 즐거운 시간을 보낼 것입니다.",
+                "어떤 어려움도 이겨낼 수 있을 것입니다.",
+                "조금 더 긍정적으로 생각해 보세요.",
+                "무리하게 일을 진행시키기 보다 적절히 휴식하면서 페이스를 조절하는 것이 좋습니다.",
+            ];
+            var randomIndex = Math.floor(Math.random() * fortunes.length);
+            var randomFortune = fortunes[randomIndex];
+
+            // 운세를 화면에 표시
+            document.getElementById("fortune").textContent = randomFortune;
+        }
+        window.onload = showFortune();
+    </script>
+
+</body>

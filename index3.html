@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<head>
+    <title>쌍둥이자리</title>
+    <style>
+        body {
+            background-image: url('별자리.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        h1 {
+            font-size: 50px;
+            color: #ffffff;
+            text-align: center;
+            padding: 0px;
+        }
+        h2 {
+            font-size: 30px;
+            color: #eddbee;
+            text-align: center;
+            padding: 20px;
+        }
+        h3 {
+            font-size: 30px;
+            color: #eddbee;
+            text-align: center;
+            padding: 10px;
+        }
+        h4 {
+            font-size: 50px;
+            color: #ffffff;
+            text-align: center;
+            padding: 0px;
+        }
+        p {
+            font-size: 20px;
+            color: #ffffff;
+            text-align: center;
+            padding: 5px;
+        }
+        p_1 {
+            font-size: 20px;
+            color: #ffffff;
+            text-align: center;
+            padding: 0px;
+        }
+        .button-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            color: #ffffff;
+            text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+            background-color: #4a00e0;
+            margin: 20px auto;
+            display: block;
+        }
+    </style>
+     
+</head>
+<body>
+    <h1>쌍둥이자리♊Gemini</h1>
+    <h2>5월 21일 ~ 6월 21일0일</h2>
+    <button onclick="say()" class="button">쌍둥이자리 신화</button>
+    <h3>  </h3>
+    <p_1 id="fortune1"></p_1>
+    <h4>오늘의 운세</h4>
+    <p id="fortune"></p>
+    <div class="button-container">
+        <a href="index.html">
+            <button class="button">돌아가기</button>
+        </a>
+    </div>
+
+    <script>
+        function say() {
+                document.getElementById("fortune1").textContent = "\n쌍둥이 형제인 카스토르와 폴룩스의 우애에 감동한 제우스가 이를 기리기 위해 만든 별자리이다. 카스토르와 폴룩스는 스파르타의 왕비 레다와 고니로 변신한 제우스 사이에서 태어났다. 카스토르는 말 타기에 능했고, 폴룩스는 권투와 무기 다루기에 뛰어난 재능이 있었다. 또한 폴룩스는 불사신의 몸을 가지고 있는 것으로 알려져 있다. 카스토르가 죽게 되자 폴룩스 역시 슬픔을 이기지 못하고 죽음을 선택하게 된다. 하지만 불사의 몸을 가진 폴룩스는 마음대로 죽을 수도 없는 운명이었다. 결국 폴룩스는 제우스에게 자신의 죽음을 부탁했고, 이들 형제의 우애에 감동한 제우스는 카스토르와 폴룩스를 두 개의 밝은 별로 만들어 형제의 우애를 영원히 기리도록 하였다.";
+            }
+
+        function showFortune() {
+            // 랜덤으로 운세 선택
+            var fortunes = [
+                "쌍둥이자리인 당신! 오늘은 가장 행운이 넘치는 날일겁니다.",
+                "조금 더 신중하게 생각하는 것은 불운을 막아줄 것입니다.",
+                "주변 사람들과 즐거운 시간을 보낼 것입니다.",
+                "어떤 어려움도 이겨낼 수 있을 것입니다.",
+                "조금 더 긍정적으로 생각해 보세요.",
+                "무리하게 일을 진행시키기 보다 적절히 휴식하면서 페이스를 조절하는 것이 좋습니다.",
+            ];
+            var randomIndex = Math.floor(Math.random() * fortunes.length);
+            var randomFortune = fortunes[randomIndex];
+
+            
+
+            // 운세를 화면에 표시
+            document.getElementById("fortune").textContent = randomFortune;
+        }
+        window.onload = showFortune();
+    </script>
+
+</body>

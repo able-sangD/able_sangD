@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<head>
+    <title>처녀자리</title>
+    <style>
+        body {
+            background-image: url('별자리.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        h1 {
+            font-size: 50px;
+            color: #ffffff;
+            text-align: center;
+            padding: 0px;
+        }
+        h2 {
+            font-size: 30px;
+            color: #eddbee;
+            text-align: center;
+            padding: 20px;
+        }
+        h3 {
+            font-size: 30px;
+            color: #eddbee;
+            text-align: center;
+            padding: 10px;
+        }
+        h4 {
+            font-size: 50px;
+            color: #ffffff;
+            text-align: center;
+            padding: 0px;
+        }
+        p {
+            font-size: 20px;
+            color: #ffffff;
+            text-align: center;
+            padding: 5px;
+        }
+        p_1 {
+            font-size: 20px;
+            color: #ffffff;
+            text-align: center;
+            padding: 0px;
+        }
+        .button-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            color: #ffffff;
+            text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+            background-color: #4a00e0;
+            margin: 20px auto;
+            display: block;
+        }
+    </style>
+     
+</head>
+<body>
+    <h1>처녀자리♍Virgo</h1>
+    <h2>8월 23일 ~ 9월 22일</h2>
+    <button onclick="say()" class="button">처녀자리 신화</button>
+    <h3>  </h3>
+    <p_1 id="fortune1"></p_1>
+    <h4>오늘의 운세</h4>
+    <p id="fortune"></p>
+    <div class="button-container">
+        <a href="index.html">
+            <button class="button" id="Button1">돌아가기</button>
+        </a>
+    </div>
+
+    <script>
+        function say() {
+            document.getElementById("fortune1").textContent = "\n제우스 신과 거인 타이탄족의 여신 테미스 사이에서 태어난 아스트레아는 정의의 여신이었다. '금의 시대'에는 신과 사람들이 어울려 지상에서 살고 있었다. 그러나 얼마 후 지상에 계절이 생기고 농업이 시작되면서 사람들 사이에서 분쟁과 싸움이 일어나자 신들은 지상을 버리고 하늘로 돌아가 버렸다. 그러나 아스트레아만은 인간을 믿고 지상 살면서 열심히 정의의 길을 설명하였다. 이 시대를 '은의 시대'라 한다. 이윽고 '동의 시대'가 되자 인간은 거짓과 폭력을 일삼게 되어 친구와 부모 형제들까지도 피를 흘리며 서로 죽이게 되자, 아스트레아도 끝내 참지 못하고 하늘로 돌아가 버렸다. 처녀자리는 이 아스트레아의 모습이라고 한다.";
+        }
+
+        function showFortune() {
+            // 랜덤으로 운세 선택
+            var fortunes = [
+                "처녀자리인 당신! 오늘은 가장 행운이 넘치는 날일겁니다.",
+                "조금 더 신중하게 생각하는 것은 불운을 막아줄 것입니다.",
+                "주변 사람들과 즐거운 시간을 보낼 것입니다.",
+                "어떤 어려움도 이겨낼 수 있을 것입니다.",
+                "조금 더 긍정적으로 생각해 보세요.",
+                "무리하게 일을 진행시키기 보다 적절히 휴식하면서 페이스를 조절하는 것이 좋습니다.",
+            ];
+            var randomIndex = Math.floor(Math.random() * fortunes.length);
+            var randomFortune = fortunes[randomIndex];
+
+            // 운세를 화면에 표시
+            document.getElementById("fortune").textContent = randomFortune;
+        }
+        window.onload = showFortune();
+    </script>
+
+</body>
